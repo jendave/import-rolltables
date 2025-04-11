@@ -6,13 +6,19 @@
   }
 
   textarea {
-      resize: none;
-      height:auto;
+    display: flex;
+    flex-direction: column;
+    resize: none;
+    height: 100%;
+    overflow: auto;
+    position: relative;
   }
 
   div.textarea {
     resize: none;
     overflow: auto;
+    height: 100%;
+    position: relative;
   }
 
   div.row {
@@ -29,6 +35,7 @@
     position: absolute;
   }
 </style>
+
 <form class="editable">
   <div class="form-group row">
     <label for="jsonfile">JSON File:</label>
@@ -37,10 +44,10 @@
       <input type="text" name="jsonfile" placeholder="path/file.json" value="{{object.jsonfile}}" />
     </div>
   </div>
-<div class="form-group textarea" overflow="scroll">
-    <textarea id="clipboardInput" name="clipboardInput"></textarea>
- </div>
+  <div class="form-group textarea parent" overflow="scroll">
+    <textarea id="clipboardInput" name="clipboardInput" rows="4" cols="50"></textarea>
+  </div>
   <div class="form-group bottom">
     <button type="submit" name="submit" value="submit">Okay</button>
   </div>
-</form>
+  

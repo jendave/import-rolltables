@@ -2,20 +2,10 @@
 /*                 CSS                  */
 /*         Add your styles here         */
 /* ------------------------------------ */
-.form-group {
-  resize: both;
-  overflow: auto;
-  color: white;
-}
-
-.form-fields {
-  resize: both;
-  overflow: auto;
-  color: white;
-}
-
 .form {
   resize: both;
   overflow: auto;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
